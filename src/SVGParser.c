@@ -1,8 +1,12 @@
-#include "SVGParser.h"
-#include "LinkedListAPI.h"
+/*
+ 
+NAME - MANJOT SINGH
+STUDENT ID - 1141657
+
+*/
+
 #include "SVGHelpers.h"
-#include <ctype.h>
-#include <math.h>
+
 
 char *attributeToString(void *data)
 {
