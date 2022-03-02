@@ -1089,14 +1089,16 @@ char* pathToJSON(const Path *p){
     int len;
 
     int number = getLength(p->otherAttributes);
-
+    char *cpath = malloc(sizeof(char) * strlen(p->data)+1);
+    strcpy(cpath,p->data);
+    cpath[64] = '\0';
  
     len =  strlen(p->data) + strlen("{\"d\":\"\",\"numAttr\":}") + 21;
     tmpStr =(char *) malloc(sizeof(char) * len);
 
-    sprintf(tmpStr,"{\"d\":\"%.64s\",\"numAttr\":%d}",p->data,number);
+    sprintf(tmpStr,"{\"d\":\"%s\",\"numAttr\":%d}",cpath,number);
 
-
+    free(cpath);
     return tmpStr;
 }
 char* groupToJSON(const Group *g){
