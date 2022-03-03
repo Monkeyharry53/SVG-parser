@@ -394,13 +394,13 @@ void parseCircle(xmlNode * node,List * circ){
         xmlNode * cir= xmlNewChild(node,NULL,(xmlChar *)"circle",NULL);
         char floatConvert[10000];
 
-        sprintf(floatConvert,"%f%s",circle->cx,circle->units);
+        sprintf(floatConvert,"%.2f%s",circle->cx,circle->units);
         xmlNewProp(cir,(const xmlChar *) "cx",(const xmlChar *)floatConvert);
         
-        sprintf(floatConvert,"%f%s",circle->cy,circle->units);
+        sprintf(floatConvert,"%.2f%s",circle->cy,circle->units);
         xmlNewProp(cir,(const xmlChar *) "cy",(const xmlChar *)floatConvert);
 
-        sprintf(floatConvert,"%f%s",circle->r,circle->units);
+        sprintf(floatConvert,"%.2f%s",circle->r,circle->units);
         xmlNewProp(cir,(const xmlChar *) "r",(const xmlChar *)floatConvert);
 
        // xmlNewProp(cir,(const xmlChar *) "units",(const xmlChar *)circle->units);
