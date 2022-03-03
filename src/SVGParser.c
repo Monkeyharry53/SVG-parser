@@ -1289,3 +1289,19 @@ char* groupListToJSON(const List *list){
     return mainStr;
 
 }
+
+SVG* JSONtoSVG(const char* svgString){
+    return NULL;
+}
+
+
+Rectangle* JSONtoRect(const char* svgString)
+{
+    return NULL;
+}
+
+
+Circle* JSONtoCircle(const char* svgString){
+    return NULL;
+}
+
