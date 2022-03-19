@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <title>CHANGE ME</title> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CHANGE ME">
+    <meta name="keywords" content="CHANGE ME">
+    <meta name="author" content="Manjot Singh">
+    <!-- Load jquery, bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="#" />
+    <!-- Custom CSS End -->
+    
+</head>
+<body>
+
+    <h3>File log pannel</h3>
+
+    <div id="scroll">
+        <table id="panel">
+            <tr id = "hrow">
+                <th id =imageStuff>Image</br>(click to download)</th>
+                <th>File name</br>(click to</br>download)</th>
+                <th >File size</th>
+                <th >Number of</br>rectangles</th>
+                <th >Number</br>of circles</th>
+                <th >Number</br>of Paths</th>
+                <th >Number</br>of group</th>
+            </tr>
+        </table>
+    </div> 
+        
+
+    <hr>
+    <h3>SVG VIEW Panel</h3>
+<div id="scroll2">
+
+        <form  method="post" action="/title-desc">
+            <select id="file-options" name="file">  
+            </select>
+            <br>
+            <img src="" id="imgSi">
+        <table id="Titledescription">
+            </table>
+        </form>
+    <table id ="properties">
+        <th>Component</th>
+        <th>Summary</th>
+        <th>other Attributes</th>
+    </table>
+    <button type="button" id="btn">Show Attributes</button>
+    <button id="hide_attr"></button>
+    <table id="pp">
+    </table>
+    </table>
+</div>
+
+
+    <hr>
+    
+<h3>Add Shape</h3>
+
+    <form id="formula" method="post" action="/add-shape">
+    <select id="file-form" name="file">  
+    </select><br>
+    <select id="rectcirc" name='shapeselect1'>
+    </select>
+   
+    
+    <table id="Shape">
+        <tr class ="shapeClear">
+            <td><label name="x">x  :</label></td>
+            <td><input type="text" name="x" value="1cm"></td>
+        </tr>
+        <tr class ="shapeClear">
+            <td><label>y  :</label></td>
+            <td><input type="text" name="y" value="1cm"></td>
+        </tr>
+        <tr class ="shapeClear">
+            <td><label>width  :</label></td>
+            <td><input type="text" name="width" value="1cm"></td>
+        </tr>
+        <tr class ="shapeClear">
+            <td><label >height  :</label></td>
+            <td><input type="text" name="height" value="1cm"></td>
+        </tr>
+        <tr class ="shapeClear">
+            <td>
+        <button class ="shapeClear">Submit</button>
+                </td>
+        </tr>
+    </table>
+</form>
+<hr>
+<h3>Scale Shape</h3>
+
+<form id="fprmula" method="post" action="/scale-shapes">
+    <select id="file-scale" name="file">  
+    </select><br>
+    <table id="scale">
+    </table>
+</form>
+<hr>
+
+<h3>Create SVG</h3>
+<form >
+    <table  id="svg">
+    </table>
+    <table id="renuMain"></table>
+
+</form>
+   
+<form ref='uploadForm' id='uploadForm' action='/upload'
+method='post'
+encType="multipart/form-data">
+<div class="form-group">
+    <input type="file" name="uploadFile" class="btn btn-secondary">
+    <input type='submit' value='Upload' class="btn btn-secondary">
+</div>
+</form>
+
+    <!-- Leave me at the bottom of body -->
+    <script src="/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
